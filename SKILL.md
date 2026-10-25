@@ -91,6 +91,10 @@ Antall József, Göncz Árpád, Horn Gyula, Orbán Viktor, Gyurcsány Ferenc, Ma
 - Ha játékbeli vagy történeti fikció: egyértelmű a fiktív státusz?
 - A kérdés a helyzetből következik, és a válaszok ténylegesen arra felelnek? Nem csempészett be az átfogalmazás új vádat, ígéretet vagy tényállítást?
 
+## Játékspecifikus rövidség
+
+Ha a feladat **Kampánykörút-kérdések vagy válaszok szerkesztése**, előbb olvasd az [integráció szöveghossz-szabályait](integrations/kampanykorut.md#szöveghossz-és-olvasási-terhelés--kampánykörút-specifikus-szabály). **Ne hosszabbíts meg automatikusan egy már érthető játékszöveget.** A kérdést és az összes látható választ együtt értékeld, az eredeti döntés jelentésének megtartásával. Ezek a határok más szakmai műfajokra nem vonatkoznak.
+
 ## Kiegészítők
 
 Az **opcionális** [Kampánykörút-integráció](integrations/kampanykorut.md) és a [narratív kontextusértelmező](integrations/kampanykorut-context.md) nem része az általános nyelvi szabályrendszernek; csak akkor olvasd, ha játékbeli esemény vagy UI-szöveg a konkrét feladat. A további kutatáshoz lásd [módszertan](references/corpus-method.md) és [példatár](references/examples.md). A szakmai szerepek összehasonlítása: [professional-context](references/professional-context.md); regressziós példák: [professional-workflows-fixtures](tests/professional-workflows-fixtures.md).

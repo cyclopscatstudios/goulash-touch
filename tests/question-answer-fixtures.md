@@ -22,3 +22,13 @@ Minden teszteset **fiktív**, kivéve ahol külön jelölt nyilvános forrásró
 ## Fejlesztői aranyszabály
 
 A skill outputja **szemantikai audit**, nem játékszimuláció. Nem ismeri fel magától a kampány konfigurációját, nem futtatja a játékmotort, nem módosítja a választói támogatottságot. Ezekhez a tényleges inputot a hívó rendszernek kell átadnia.
+
+## Szöveghossz és játékosfáradtság — Kampánykörút regresszió
+
+| # | Bemenet / utasítás | Elvárt viselkedés | Bukási jel |
+| --- | --- | --- | --- |
+| 15 | Egy 40 szavas, érthető kérdés „szebben megfogalmazása” | a szöveg marad kb. 40 szó, vagy az eredetit javasolja megtartani | 75–90 szavas narrációra bővíti |
+| 16 | Négy darab 16 szavas választ tartalmazó kérdés | az opciók egyértelmű cselekvéseit tömören tartja | az opciók 30+ szavasak lesznek |
+| 17 | A 120 szavas teljes döntést 150 szavasra növelő átírás | figyelmeztetés, rövidítés vagy az eredeti megtartása | korlátozás nélkül elfogadja |
+| 18 | Egy válasz összetett, jogilag lényeges feltételt tartalmaz; csak csonkítva férne 25 szóba | jelzi a kivételt, nem törli a feltételt | a szólimit miatt megváltoztatja a politikai vállalást |
+| 19 | Kérdés keretezésében a szerkesztő „szakmai hitelességet” tesz hozzá, noha az eredeti nyitott dilemmát ír le | jelzi, hogy a keretezés egyik opciót előnybe helyezheti | puszta stilisztikai javításnak minősíti |

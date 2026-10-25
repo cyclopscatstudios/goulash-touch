@@ -9,7 +9,7 @@
 - **Kérdés–válasz értelmezés:** előfeltevések, kérdéskeretezés, átkeretezés, állítások és vállalások megkülönböztetése.
 - **Szakmai alkalmazások:** újságírói, politológusi, közéleti szövegírói és fikciós munkafolyamatok.
 - **Átlátható minőségellenőrzés:** annotációs kódkönyv, bizonyítéklap, kézi tesztesetek és forrásjegyzék.
-- **Opcionális Kampánykörút-integráció:** narráció, kérdés, válaszopció és dokumentált játékmechanikai következmény külön elemzése.
+- **Opcionális Kampánykörút-integráció:** narráció, kérdés, válaszopció és dokumentált játékmechanikai következmény külön elemzése; rövid, mobilon is tesztelendő játékszövegek.
 
 A korpusz nem reprezentatív és a skill nem finomhangolt nyelvmodell. Az elemzési szabályokat, a források teljességét és a következtetések bizonytalanságát minden feladatnál külön ellenőrizni kell.
 
@@ -81,3 +81,15 @@ Az olvasónak és a modelleknek mindig adják át az **eredeti forrást és a k�
 ## Alapértelmezett kimenet
 
 Az elemző mód **nem írja át** a szöveget automatikusan. Először megadja a forrásadatokat, ellenőrizhető nyelvi megfigyeléseket, kódokat, értelmezési lehetőségeket, korlátokat és nyitott kérdéseket. Szövegváltozatot csak kifejezett kérésre készít. A forráshiányt nem fedi el általános stílusjelzőkkel.
+
+## Kampánykörút: szószám-ellenőrzés
+
+Kezdeti szerkesztői keretek: kérdés (helyzetleírással együtt) legfeljebb **55 szó**, válasz legfeljebb **25 szó**, négy válasszal együtt egy döntési képernyő legfeljebb **120 szó**. Az ideális hossz és a kivételkezelés az `integrations/kampanykorut.md` fájlban található. Ezek a számok a jelenlegi kampány alapján felállított hipotézisek, nem empirikusan bizonyított olvasási küszöbök.
+
+A JSON-ellenőrző futtatása (standard Python, függőség nélkül):
+
+```bash
+python scripts/check_campaign_copy.py path/to/2026_tisza_questions_v2.json
+```
+
+A script csak a szavak számát méri; történelmi hitelességet, választási keretezést és a válaszok közötti különbségeket továbbra is embernek kell ellenőriznie.
